@@ -10,7 +10,7 @@
 最后，gibbs_sampler和randomized_motif_search都是通过随机算法解决了模体发现问题  
 
 ## 伪代码
-```python
+```
     MotifEnumeration(Dna, k, d)
         Patterns ← an empty set
         for each k-mer Pattern in the first string in Dna
@@ -21,7 +21,7 @@
         return Patterns
 ```
 
-```python
+```
     MedianString(Dna, k)
         distance ← ∞
         for each k-mer Pattern from AA…AA to TT…TT
@@ -30,7 +30,7 @@
                  Median ← Pattern
         return Median
 ```
-```python
+```
     GreedyMotifSearch(Dna, k, t)
         BestMotifs ← motif matrix formed by first k-mers in each string from Dna
         for each k-mer Motif in the first string from Dna
@@ -43,7 +43,7 @@
                 BestMotifs ← Motifs
         return BestMotifs
 ```
-```python
+```
     RandomizedMotifSearch(Dna, k, t)
         randomly select k-mers Motifs = (Motif1, …, Motift) in each string from Dna
         BestMotifs ← Motifs
@@ -55,7 +55,7 @@
             else
                 return BestMotifs
 ```
-```python
+```
     Gibbs sampler(Dna, k, t, N)
         randomly select k-mers Motifs = (Motif1, …, Motift) in each string from Dna
         BestMotifs ← Motifs
@@ -67,4 +67,6 @@
                 BestMotifs ← Motifs
         return BestMotifs
 ```
-如果你想要理解伪代码本身，建议去学习在线课程[模体发现](https://www.coursera.org/learn/dna-analysis/home/welcome)或阅读[《Bioinformatics Algorithms: an Active Learning Approach》](http://bioinformaticsalgorithms.com/index.htm)
+如果你想要理解伪代码本身，建议你：  
+学习在线课程[[Finding Hidden Messages in DNA (Bioinformatics I)]](https://www.coursera.org/learn/dna-analysis/home/welcome)  
+或阅读书籍[《Bioinformatics Algorithms: an Active Learning Approach》](http://bioinformaticsalgorithms.com/index.htm)
