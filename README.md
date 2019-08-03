@@ -68,5 +68,5 @@
         return BestMotifs
 ```
 如果你想要理解伪代码本身，建议你：  
-学习在线课程[[Finding Hidden Messages in DNA (Bioinformatics I)]](https://www.coursera.org/learn/dna-analysis/home/welcome)  
+学习在线课程[Finding Hidden Messages in DNA (Bioinformatics I)](https://www.coursera.org/learn/dna-analysis/home/welcome)  
 或阅读书籍[《Bioinformatics Algorithms: an Active Learning Approach》](http://bioinformaticsalgorithms.com/index.htm)
