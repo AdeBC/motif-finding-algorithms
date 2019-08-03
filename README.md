@@ -7,11 +7,11 @@
 总共有三种算法解决Motif finding问题：
 >枚举算法-Enumeration algorithm  
 贪心算法-Greedy algorithm  
-随机算法-randomized algorithm    
+随机算法-Randomized algorithm    
 
-项目中的median_string和motif_enumeration即是通过枚举算法解决了模体发现问题  
-而greedy_motif_search是通过贪心算法解决了模体发现问题  
-最后，gibbs_sampler和randomized_motif_search都是通过随机算法解决了模体发现问题  
+##### 项目文件中的src/median_string.py和src/motif_enumeration.py即是通过枚举算法解决了模体发现问题  
+##### 而src/greedy_motif_search.py是通过贪心算法解决了模体发现问题  
+##### 最后，src/gibbs_sampler.py和src/randomized_motif_search.py都是通过随机算法解决了模体发现问题  
 
 ## 伪代码
 ```
