@@ -1,18 +1,24 @@
 Motif-finding
 =
 ## 模体发现
-* 模体发现是经典的生物信息学问题之一，目的在于快速地找到一系列具有相同酶（DNA复制酶等）作用位点的基因上的模体。   
-* 以下关于模体的解释来自华中科技大学生命科学与技术学院教授薛宇老师制作的[生物信息学课件](http://xue.biocuckoo.org/course.html)第六章：序列模式识别  
-![Motif](https://github.com/ChongHui-007/Motif-finding/blob/master/src/motif.png)
+```
+模体发现是经典的生物信息学问题之一，目的在于快速地找到一系列具有相同酶（DNA复制酶等）作用位点的基因上的模体。  
+模体：  
+> 1. 不具有独立的三级结构  
+2. 具有特定的生物学功能：结合、修饰、细胞亚定位、维持结构等  
+3. 长度一半几个到几十个氨基酸/碱基    
+```
+若想了解更多参阅 Prof. Xue 制作的[*生物信息学课件——第六章：序列模式识别*](http://xue.biocuckoo.org/course.html)    
+
 ## 算法实现  
 总共有三种算法解决Motif finding问题：  
 
 
 | 算法类型  | 实现   |  
 | :------- | :---------- |  
-| **枚举算法——Enumeration algorithm** | [*src/median_string.py](https://github.com/ChongHui-007/Motif-finding/blob/master/src/median_string.py 'view median_string.py') [src/motif_enumeration.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/motif_enumeration.py 'view motif_enumeration.py') |  
-| **贪心算法——Greedy algorithm** | [*src/greedy_motif_search.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/greedy_motif_search.py 'view greedy_motif_search.py') |  
-| **随机算法——Randomized algorithm** |[*src/gibbs_sampler.py](https://github.com/ChongHui-007/Motif-finding/blob/master/src/gibbs_sampler.py 'view gibbs_sampler.py') [src/randomized_motif_search.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/randomized_motif_search.py 'view randomized_motif_search.py') |    
+| 枚举算法——Enumeration algorithm | [*src/median_string.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/median_string.py 'view median_string.py') [*src/motif_enumeration.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/motif_enumeration.py 'view motif_enumeration.py') |  
+| 贪心算法——Greedy algorithm | [*src/greedy_motif_search.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/greedy_motif_search.py 'view greedy_motif_search.py') |  
+| 随机算法——Randomized algorithm | [*src/gibbs_sampler.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/gibbs_sampler.py 'view gibbs_sampler.py') [*src/randomized_motif_search.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/randomized_motif_search.py 'view randomized_motif_search.py') |    
 
 ## 伪代码
 ```
