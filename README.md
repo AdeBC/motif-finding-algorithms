@@ -1,28 +1,28 @@
 # Motif-finding
+---
 
-## 模体发现
-
-
-Motif finding 是经典的生物信息学问题之一，目的在于快速地找到一系列具有相同酶（DNA复制酶等）作用位点的基因上的模体。  
+Motif finding problem is a classical bioinformatics problem, aiming to quickly find a series of motifs on genes with the same enzyme (DNA replicase, etc.) binding site.  
 Motif：  
-> 1. 不具有独立的三级结构  
-> 2. 具有特定的生物学功能：结合、修饰、细胞亚定位、维持结构等  
-> 3. 长度一半几个到几十个氨基酸/碱基    
-
-若想了解更多参阅 Prof. Xue 制作的[*生物信息学课件——第六章：序列模式识别*](http://xue.biocuckoo.org/course.html)    
-
-## 算法实现  
-
-总共有三种算法解决Motif finding问题：  
+> 1. Does not have an independent tertiary structure.  
+> 2. Has specific biological functions: binding, modification, cell sublocalization, maintenance of structures, etc.  
+> 3. The length is generally several to several tens of amino acids / base.      
 
 
-| 算法类型  | 实现   |  
+If you want to know more about motif and motif finding problem, please see
+[*序列模式识别 by Prof. Xue*](http://xue.biocuckoo.org/course.html 'Chinese') or [*Sequence motif - Wikipedia*](https://en.wikipedia.org/wiki/Sequence_motif 'English')   
+
+## Algorithm implementation  
+
+In this toturial project, we have three algorithms to solve the Motif finding problem.  
+
+
+| Type of algorithm  | Implementation code  |  
 | :------- | :---------- |  
-| 枚举算法——Enumeration algorithm | [*src/median_string.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/median_string.py 'view median_string.py') [*src/motif_enumeration.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/motif_enumeration.py 'view motif_enumeration.py') |  
-| 贪心算法——Greedy algorithm | [*src/greedy_motif_search.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/greedy_motif_search.py 'view greedy_motif_search.py') |  
-| 随机算法——Randomized algorithm | [*src/gibbs_sampler.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/gibbs_sampler.py 'view gibbs_sampler.py') [*src/randomized_motif_search.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/randomized_motif_search.py 'view randomized_motif_search.py') |    
+| Enumeration algorithm | [*src/median_string.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/median_string.py 'view median_string.py') [*src/motif_enumeration.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/motif_enumeration.py 'view motif_enumeration.py') |  
+| Greedy algorithm | [*src/greedy_motif_search.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/greedy_motif_search.py 'view greedy_motif_search.py') |  
+| Randomized algorithm | [*src/gibbs_sampler.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/gibbs_sampler.py 'view gibbs_sampler.py') [*src/randomized_motif_search.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/randomized_motif_search.py 'view randomized_motif_search.py') |    
 
-## 伪代码
+## Pseudocode
 
 ```
     MotifEnumeration(Dna, k, d)
@@ -81,7 +81,8 @@ Motif：
                 BestMotifs ← Motifs
         return BestMotifs
 ```
-## 理解  
-如果你想要理解伪代码本身，建议你：   
-    1. 学习课程[《Finding Hidden Messages in DNA》](https://www.coursera.org/learn/dna-analysis/home/welcome)    
-    2. 阅读书籍[《Bioinformatics Algorithms: an Active Learning Approach》](http://bioinformaticsalgorithms.com/index.htm)
+## Further more   
+
+IF you want to fully understand these Pseudo code, try  
+    1. Learn [《Finding Hidden Messages in DNA》](https://www.coursera.org/learn/dna-analysis/home/welcome)      
+    2. Read [《Bioinformatics Algorithms: an Active Learning Approach》](http://bioinformaticsalgorithms.com/index.htm)  
