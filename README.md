@@ -1,8 +1,8 @@
 # Motif-finding
 ## 模体发现
+模体发现是经典的生物信息学问题之一，目的在于快速地找到一系列具有相同酶（DNA复制酶等）作用位点的基因上的模体。   
 以下关于模体的解释来自华中科技大学生命科学与技术学院教授薛宇老师制作的[生物信息学课件](http://xue.biocuckoo.org/course.html)第六章：序列模式识别  
 ![Motif](https://github.com/ChongHui-007/Motif-finding/blob/master/src/motif.png)
-模体发现是经典的生物信息学问题之一，目的在于快速地找到一系列具有相同酶（DNA复制酶等）作用位点的基因上的模体。
 ## 算法实现
 总共有三种算法解决Motif finding问题：
 >枚举算法-Enumeration algorithm  
