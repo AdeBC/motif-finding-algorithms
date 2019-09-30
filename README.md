@@ -83,8 +83,8 @@ In this toturial project, we have three algorithms to solve the Motif finding pr
 ## Further more   
 
 IF you want to fully understand these Pseudocode, try  
-    1. Learn [《Finding Hidden Messages in DNA》](https://www.coursera.org/learn/dna-analysis/home/welcome)      
-    2. Read [《Bioinformatics Algorithms: an Active Learning Approach》](http://bioinformaticsalgorithms.com/index.htm)  
+    1. Learn [*Finding Hidden Messages in DNA*](https://www.coursera.org/learn/dna-analysis/home/welcome)      
+    2. Read [*Bioinformatics Algorithms: an Active Learning Approach*](http://bioinformaticsalgorithms.com/index.htm)  
 ## To-do list
 1. Bug fixes
 2. Add more code comments
