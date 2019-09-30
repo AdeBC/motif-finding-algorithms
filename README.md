@@ -8,8 +8,7 @@ Motif：
 > 3. The length is generally several to several tens of amino acids / base.      
 
 
-If you want to know more about motif and motif finding problem, please see
-[*序列模式识别 by Prof. Xue*](http://xue.biocuckoo.org/course.html 'Chinese') or [*Sequence motif - Wikipedia*](https://en.wikipedia.org/wiki/Sequence_motif 'English')   
+If you want to know more about motif and motif finding problem, please see [*序列模式识别 by Prof. Xue*](http://xue.biocuckoo.org/course.html 'Chinese') or [*Sequence motif - Wikipedia*](https://en.wikipedia.org/wiki/Sequence_motif 'English')   
 
 ## Algorithm implementation  
 
@@ -83,7 +82,7 @@ In this toturial project, we have three algorithms to solve the Motif finding pr
 ```
 ## Further more   
 
-IF you want to fully understand these Pseudo code, try  
+IF you want to fully understand these Pseudocode, try  
     1. Learn [《Finding Hidden Messages in DNA》](https://www.coursera.org/learn/dna-analysis/home/welcome)      
     2. Read [《Bioinformatics Algorithms: an Active Learning Approach》](http://bioinformaticsalgorithms.com/index.htm)  
 ## To-do list
