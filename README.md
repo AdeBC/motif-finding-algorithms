@@ -6,11 +6,13 @@ Motif-finding
 ![Motif](https://github.com/ChongHui-007/Motif-finding/blob/master/src/motif.png)
 ## 算法实现  
 总共有三种算法解决Motif finding问题：  
-| 算法类型 | 对应解决方案 |  
+
+
+| 算法类型  | 实现   |  
 | :------- | :---------- |  
-| 枚举算法——Enumeration algorithm | src/median_string.py src/motif_enumeration.py |  
-| 贪心算法——Greedy algorithm | src/greedy_motif_search.py |  
-| 随机算法——Randomized algorithm | src/gibbs_sampler.py src/randomized_motif_search.py |    
+| **枚举算法——Enumeration algorithm** | [*src/median_string.py](https://github.com/ChongHui-007/Motif-finding/blob/master/src/median_string.py 'view median_string.py') [src/motif_enumeration.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/motif_enumeration.py 'view motif_enumeration.py') |  
+| **贪心算法——Greedy algorithm** | [*src/greedy_motif_search.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/greedy_motif_search.py 'view greedy_motif_search.py') |  
+| **随机算法——Randomized algorithm** |[*src/gibbs_sampler.py](https://github.com/ChongHui-007/Motif-finding/blob/master/src/gibbs_sampler.py 'view gibbs_sampler.py') [src/randomized_motif_search.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/randomized_motif_search.py 'view randomized_motif_search.py') |    
 
 ## 伪代码
 ```
