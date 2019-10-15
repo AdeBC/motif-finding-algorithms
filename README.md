@@ -15,7 +15,7 @@ If you want to know more about motif and motif finding problem, please see [*序
 In this toturial project, we have three algorithms to solve the Motif finding problem.  
 
 
-| Types of algorithm  | Implementation code  |  
+| Algorithm type | Implementation code  |  
 | :------- | :---------- |  
 | Enumeration algorithm | [*src/median_string.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/median_string.py 'view median_string.py') [*src/motif_enumeration.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/motif_enumeration.py 'view motif_enumeration.py') |  
 | Greedy algorithm | [*src/greedy_motif_search.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/greedy_motif_search.py 'view greedy_motif_search.py') |  
