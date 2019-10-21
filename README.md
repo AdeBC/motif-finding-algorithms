@@ -1,5 +1,4 @@
 # Motif-finding
----
 
 Motif finding problem is a classical bioinformatics problem, aiming to quickly find a series of motifs on genes with the same enzyme (DNA replicase, etc.) binding site.  
 Motif：  
@@ -8,18 +7,28 @@ Motif：
 > 3. The length is generally several to several tens of amino acids / base.      
 
 
-If you want to know more about motif and motif finding problem, please see [*序列模式识别 by Prof. Xue*](http://xue.biocuckoo.org/course.html 'Chinese') and [*Sequence motif - Wikipedia*](https://en.wikipedia.org/wiki/Sequence_motif 'English')   
+If you want to know more about motif and motif finding problem, please see [*序列模式识别 by Prof. Xue*](http://xue.biocuckoo.org/course.html 'http://xue.biocuckoo.org/course.html "Chinese"') and [*Sequence motif - Wikipedia*](https://en.wikipedia.org/wiki/Sequence_motif 'https://en.wikipedia.org/wiki/Sequence_motif "English"')     
 
-## Algorithm implementation  
+---
+模体发现是一个经典的生物信息学问题，致力于在被同样的蛋白质结合的基因集上游序列里找到模体。
+模体（Motif）：
+> 1. 不具有独立的三级结构；
+> 2. 具有特定的生物学功能：结合、修饰、细胞亚定位和结构维持等；
+> 3. 长度通常在几个到几十个碱基/氨基酸。
+
+
+关于模体和模体发现问题，如果你想了解更多，请参阅[*序列模式识别 by Prof. Xue*](http://xue.biocuckoo.org/course.html 'http://xue.biocuckoo.org/course.html "Chinese"') 和 [*Sequence motif - Wikipedia*](https://en.wikipedia.org/wiki/Sequence_motif 'https://en.wikipedia.org/wiki/Sequence_motif "English"') 。
+## Algorithm implementation
 
 In this toturial project, we have three algorithms to solve the Motif finding problem.  
+在这个教程项目里，我们将会使用三种算法来解决模体发现问题。
 
 
 | Algorithm | Code  |  
 | :------- | :---------- |  
-| Enumeration algorithm | [*src/median_string.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/median_string.py 'view median_string.py') [*src/motif_enumeration.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/motif_enumeration.py 'view motif_enumeration.py') |  
-| Greedy algorithm | [*src/greedy_motif_search.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/greedy_motif_search.py 'view greedy_motif_search.py') |  
-| Randomized algorithm | [*src/gibbs_sampler.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/gibbs_sampler.py 'view gibbs_sampler.py') [*src/randomized_motif_search.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/randomized_motif_search.py 'view randomized_motif_search.py') |    
+| 枚举算法——Enumeration algorithm | [*src/median_string.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/median_string.py 'view median_string.py') [*src/motif_enumeration.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/motif_enumeration.py 'view motif_enumeration.py') |  
+| 贪心算法——Greedy algorithm | [*src/greedy_motif_search.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/greedy_motif_search.py 'view greedy_motif_search.py') |  
+| 随机算法——Randomized algorithm | [*src/gibbs_sampler.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/gibbs_sampler.py 'view gibbs_sampler.py') [*src/randomized_motif_search.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/randomized_motif_search.py 'view randomized_motif_search.py') |    
 
 ## Pseudocode
 
@@ -80,12 +89,15 @@ In this toturial project, we have three algorithms to solve the Motif finding pr
                 BestMotifs ← Motifs
         return BestMotifs
 ```
-## Further more   
+## Further more
 
 If you want to fully understand these Pseudocode, try  
-    1. Learn [*Finding Hidden Messages in DNA*](https://www.coursera.org/learn/dna-analysis/home/welcome)      
-    2. Read [*Bioinformatics Algorithms: an Active Learning Approach*](http://bioinformaticsalgorithms.com/index.htm)  
-## To-do list
+    1. Learn [*Finding Hidden Messages in DNA*](https://www.coursera.org/learn/dna-analysis/home/welcome 'https://www.coursera.org/learn/dna-analysis/home/welcome')      
+    2. Read [*Bioinformatics Algorithms: an Active Learning Approach*](http://bioinformaticsalgorithms.com/index.htm 'http://bioinformaticsalgorithms.com/index.htm')  
+如果你想要完全理解这些伪代码，请尝试：  
+    1. 学习在线课程[*Finding Hidden Messages in DNA*](https://www.coursera.org/learn/dna-analysis/home/welcome 'https://www.coursera.org/learn/dna-analysis/home/welcome')；  
+    2. 阅读[*Bioinformatics Algorithms: an Active Learning Approach*](http://bioinformaticsalgorithms.com/index.htm 'http://bioinformaticsalgorithms.com/index.htm')。  
+## To-do
 1. Bug fixes
 2. Add more code comments
 3. Usage description
