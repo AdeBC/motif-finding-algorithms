@@ -53,13 +53,13 @@ In this toturial project, we have three algorithms to solve the Motif finding pr
  ```
  ```py
     def New_MotifEnumeration(Dna, k, d):
-	    patterns= []                              
-        mers=build_4k_k_merset(k)
-		for i in merset
-			if multihammingd(Dna, i)<= d:
-				patterns.append(i)
-        patterns= list(set(patterns))
-    	return ' '.join(patterns)
+		patterns= []
+		mers=build_4k_k_merset(k)
+		for i in merset:
+		    if multihammingd(Dna, i)<= d:
+                patterns.append(i)
+		patterns= list(set(patterns))
+		return ' '.join(patterns)
 ```
 ### MedianString
 ```
