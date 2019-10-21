@@ -31,18 +31,37 @@ In this toturial project, we have three algorithms to solve the Motif finding pr
 | 随机算法——Randomized algorithm | [*src/gibbs_sampler.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/gibbs_sampler.py 'view gibbs_sampler.py') [*src/randomized_motif_search.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/randomized_motif_search.py 'view randomized_motif_search.py') |    
 
 ## Pseudocode
-
+### MotifEnumeration
 ```
     MotifEnumeration(Dna, k, d)
         Patterns ← an empty set
         for each k-mer Pattern in the first string in Dna
-            for each k-mer Pattern’ differing from Pattern by at most d mismatches
+            for each k-mer Pattern' differing from Pattern by at most d mismatches
                 if Pattern' appears in each string from Dna with at most d mismatches
                     add Pattern' to Patterns
         remove duplicates from Patterns
         return Patterns
+        
+        
+    New_MotifEnumeration(Dna, k, d)
+        Patterns ← an empty set
+        for each k-mer Pattern' from AA…AA to TT…TT
+            if Pattern' appears in each string from Dna with at most d mismatches
+                add Pattern' to Patterns
+        remove duplicates from Patterns
+        return Patterns
+ ```
+ ```py
+    def New_MotifEnumeration(Dna, k, d):
+	    patterns= []                              
+        mers=build_4k_k_merset(k)                   
+	    for i in mers:
+	    	if multihammingd(Dna, i)<= d:
+                patterns.append(i)
+        patterns= list(set(patterns))
+    	return ' '.join(patterns)
 ```
-
+### MedianString
 ```
     MedianString(Dna, k)
         distance ← ∞
@@ -51,7 +70,33 @@ In this toturial project, we have three algorithms to solve the Motif finding pr
                  distance ← d(Pattern, Dna)
                  Median ← Pattern
         return Median
+        
+        
+    New_MedianString(Dna, k)
+        scores ← an empty set
+        median ← an empty set
+        merset ← a k-mer set of sequence from AA…AA to TT…TT
+        for each k-mer Pattern from merset
+            sumdistance ← sum of distances between k-mer and each sequence from Dna
+            add sumdistance to scores
+        for each number from 0 to length of scores
+            if scores[number] equals to minimum value of scores
+                add merset[numer] to median
+        return median
 ```
+```py
+    def New_MedianString(dnas, k):
+        merset=build_4k_k_merset(k)
+        scores=[]
+        median=[]
+        for i in merset: 
+            scores.append(sumdistance(dnas, i))
+        for i in range(len(scores)):
+            if scores[i]==min(scores): 
+                median.append(merset[i])
+        return ' '.join(median)
+```
+### GreedyMotifSearch  
 ```
     GreedyMotifSearch(Dna, k, t)
         BestMotifs ← motif matrix formed by first k-mers in each string from Dna
@@ -65,6 +110,28 @@ In this toturial project, we have three algorithms to solve the Motif finding pr
                 BestMotifs ← Motifs
         return BestMotifs
 ```
+```py
+    def greedy_motif_search(dnas, k, t):
+        bestmotifs=[i[0:k]for i in dnas]; motif=['']*t
+        for num in range(len(dnas[0])-k+1):
+    #		print(num)
+            nmotif=dnas[0][num:num+k]
+            motif[0]=nmotif
+            for i in range(1,t):
+                matrix= build_pssm_matrix(motif[0:i])
+    #			for line in matrix: print(line) 
+                motif[i]= profile_most(dnas[i], k, matrix)
+    #			print(motif[i])
+    #		for line in matrix: print(line)
+            motifs=motif[:]
+            sm=score(motifs); sb=score(bestmotifs)
+    #		print('motif:    {}, score:{}'.format(motifs, sm))
+    #		print('bestmotif:{}, score:{}'.format(bestmotifs, sb)); print('\n')
+            if sm< sb:
+                bestmotifs= motifs[:]
+        return bestmotifs
+```
+### RandomizedMotifSearch  
 ```
     RandomizedMotifSearch(Dna, k, t)
         randomly select k-mers Motifs = (Motif1, …, Motift) in each string from Dna
@@ -77,6 +144,24 @@ In this toturial project, we have three algorithms to solve the Motif finding pr
             else
                 return BestMotifs
 ```
+```py
+    def randomized_motif_search(dnas, k, t):
+
+        motifs=[]; c=0
+        for i in dnas:
+            r= random.randint(0, len(dnas[0])- k- 1); motifs.append(i[r:r+k])
+        bestmotifs= motifs.copy(); print('		the original motifs is: ', motifs)
+        while 1:
+            pssm= build_pssm_matrix(motifs)
+            for i in range(t): motifs[i]= profile_most(dnas[i], k, pssm)
+            print('		the profile motifs is: ', motifs)
+            if score(motifs) < score(bestmotifs): 
+                bestmotifs= motifs.copy()
+    #			print('		loop once, the motifs is :{}',format(motifs))
+            else : 
+                return bestmotifs
+```
+### Gibbs sampler  
 ```
     Gibbs sampler(Dna, k, t, N)
         randomly select k-mers Motifs = (Motif1, …, Motift) in each string from Dna
@@ -89,12 +174,28 @@ In this toturial project, we have three algorithms to solve the Motif finding pr
                 BestMotifs ← Motifs
         return BestMotifs
 ```
+```py
+    def gibbs_sampler(dnas, k, t, N):
+        motifs=[]; c=0
+        for i in dnas:
+            r= random.randint(0, len(dnas[0])- k- 1); motifs.append(i[r:r+k])
+        bestmotifs= motifs.copy()
+        for j in range(N-1):
+            i=random.randint(0, t-1)
+            nmotifs= motifs.copy()
+            nmotifs.pop(i)
+            pssm= build_pssm_matrix(nmotifs)
+            motifs[i]= profile_most(dnas[i], k, pssm)
+            if score(motifs) < score(bestmotifs): 
+                bestmotifs= motifs.copy()
+        return bestmotifs
+```
 ## Further more
 
-If you want to fully understand these Pseudocode, try  
+* If you want to fully understand these Pseudocode, try  
     1. Learn [*Finding Hidden Messages in DNA*](https://www.coursera.org/learn/dna-analysis/home/welcome 'https://www.coursera.org/learn/dna-analysis/home/welcome')      
     2. Read [*Bioinformatics Algorithms: an Active Learning Approach*](http://bioinformaticsalgorithms.com/index.htm 'http://bioinformaticsalgorithms.com/index.htm')  
-如果你想要完全理解这些伪代码，请尝试：  
+* 如果你想要完全理解这些伪代码，请尝试：  
     1. 学习在线课程[*Finding Hidden Messages in DNA*](https://www.coursera.org/learn/dna-analysis/home/welcome 'https://www.coursera.org/learn/dna-analysis/home/welcome')；   
     2. 阅读[*Bioinformatics Algorithms: an Active Learning Approach*](http://bioinformaticsalgorithms.com/index.htm 'http://bioinformaticsalgorithms.com/index.htm')。   
 ## To-do
