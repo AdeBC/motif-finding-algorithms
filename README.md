@@ -55,9 +55,9 @@ In this toturial project, we have three algorithms to solve the Motif finding pr
     def New_MotifEnumeration(Dna, k, d):
 	    patterns= []                              
         mers=build_4k_k_merset(k)
-		for i in mers:
-	    	if multihammingd(Dna, i)<= d:
-        		patterns.append(i)
+		for i in merset
+			if multihammingd(Dna, i)<= d:
+				patterns.append(i)
         patterns= list(set(patterns))
     	return ' '.join(patterns)
 ```
