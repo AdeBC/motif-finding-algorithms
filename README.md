@@ -15,7 +15,7 @@ If you want to know more about motif and motif finding problem, please see [*序
 In this toturial project, we have three algorithms to solve the Motif finding problem.  
 
 
-| Algorithm type | Implementation code  |  
+| Algorithm | Code  |  
 | :------- | :---------- |  
 | Enumeration algorithm | [*src/median_string.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/median_string.py 'view median_string.py') [*src/motif_enumeration.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/motif_enumeration.py 'view motif_enumeration.py') |  
 | Greedy algorithm | [*src/greedy_motif_search.py*](https://github.com/ChongHui-007/Motif-finding/blob/master/src/greedy_motif_search.py 'view greedy_motif_search.py') |  
@@ -82,7 +82,7 @@ In this toturial project, we have three algorithms to solve the Motif finding pr
 ```
 ## Further more   
 
-IF you want to fully understand these Pseudocode, try  
+If you want to fully understand these Pseudocode, try  
     1. Learn [*Finding Hidden Messages in DNA*](https://www.coursera.org/learn/dna-analysis/home/welcome)      
     2. Read [*Bioinformatics Algorithms: an Active Learning Approach*](http://bioinformaticsalgorithms.com/index.htm)  
 ## To-do list
