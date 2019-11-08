@@ -200,5 +200,5 @@ In this toturial project, we have three algorithms to solve the Motif finding pr
     2. 阅读[*Bioinformatics Algorithms: an Active Learning Approach*](http://bioinformaticsalgorithms.com/index.htm 'http://bioinformaticsalgorithms.com/index.htm')。   
 ## To-do
 1. Bug fixes
-2. Add more code comments
+2. More code comments
 3. Usage description
