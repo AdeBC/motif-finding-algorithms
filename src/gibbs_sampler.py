@@ -3,7 +3,7 @@
 import datetime
 import random
  
-start = datetime.datetime.now()
+start = datetime.datetime.now() 
 
 
 def scoring_motif(matrix, m):
