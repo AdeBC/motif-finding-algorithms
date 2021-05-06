@@ -14,7 +14,7 @@ If you want to know more about motif and motif finding problem, please see [*序
 模体（Motif）：  
 > 1. 不具有独立的三级结构；  
 > 2. 具有特定的生物学功能：结合、修饰、细胞亚定位和结构维持等；  
-> 3. 长度通常在几个到几十个碱基/氨基酸。  
+> 3. 长度通常在几个到几十个碱基/氨基酸。   
 
 
 关于模体和模体发现问题，如果你想了解更多，请参阅[*序列模式识别 by Prof. Xue*](http://xue.biocuckoo.org/course.html 'http://xue.biocuckoo.org/course.html "Chinese"') 和 [*Sequence motif - Wikipedia*](https://en.wikipedia.org/wiki/Sequence_motif 'https://en.wikipedia.org/wiki/Sequence_motif "English"') 。
